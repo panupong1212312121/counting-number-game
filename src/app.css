@@ -1,0 +1,255 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.font-body {
+    font-family: 'HankenGrotesk';
+}
+
+
+
+
+
+/* button detail  */
+.custom-btn {
+  background-color: hsl(224, 30%, 27%);
+}
+
+.custom-btn:hover {
+  background-image: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+/*  */
+
+
+
+
+
+/* input box detail*/
+.input.input-bordered::placeholder {
+  color: transparent; /* Make the placeholder text transparent */
+  text-shadow: 0 0 0 black; /* Add a shadow with black color */
+}
+/*  */
+
+
+
+
+
+/* circle button for navigate page at rule.svelte */
+.page-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.page-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.page-circle.active {
+  background-color: #333;
+}
+/*  */
+
+
+
+
+
+/* layout detail */
+.grid-box{
+  display: grid;
+  grid-template-columns: repeat(10, 60px);
+  grid-template-rows: repeat(9, 60px);
+  gap: 2px;
+  padding: 2px;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding : 2px;
+  width: 100%; /* Set the width to fill the column */
+  height: 100%; /* Set the height to fill the row */
+}
+
+.box1 {
+  grid-column: 4 / span 4;
+  grid-row: 1 / span 1;
+}
+
+.box2 {
+  grid-column: 8 / span 1;
+  grid-row: 1 / span 1;
+}
+
+.box3 {
+  grid-column: 5 / span 2;
+  grid-row: 3 / span 1;
+}
+
+.box4 {
+  grid-column: 2 / span 2;
+  grid-row: 4 / span 1;
+}
+
+.box5 {
+  grid-column: 8 / span 2;
+  grid-row: 4 / span 1;
+}
+
+.box6 {
+  grid-column: 1 / span 4;
+  grid-row: 5 / span 5;
+}
+
+.box7 {
+  grid-column: 7 / span 4;
+  grid-row: 5 / span 5;
+}
+
+.box8 {
+  grid-column: 8 / span 2;
+  grid-row: 3 / span 1;
+}
+/*  */
+
+
+
+
+
+/* loading animation when thinking === true */
+.loading-animation {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #000;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/*  */
+
+
+
+
+
+/* exit detail */
+.exit {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+}
+
+.hoverExit {
+  transition: background-color 0.3s;
+}
+
+.hoverExit:hover {
+  background-color: lightgray; /* Change to the desired hover color */
+  opacity: 0.8;
+}
+
+.activeExit {
+  cursor: pointer;
+}
+/*  */
+
+
+
+
+
+/* undo detail */
+.undo {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+}
+
+.hoverUndo {
+  transition: background-color 0.3s;
+}
+
+.hoverUndo:hover {
+  background-color: lightgray;/* Change to the desired hover color */
+  opacity: 0.8;
+}
+
+.activeUndo {
+  cursor: pointer;
+}
+
+.disabledUndo{
+  opacity : 0.1;
+  pointer-events: none; /* Disable pointer events */
+  cursor: default; /* Set the cursor to the default arrow cursor */
+}
+/*  */
+
+
+
+
+
+/* progress bar detail */
+.progress-bar {
+    width: 100%;
+    height: 100%;
+    background-color: lightgray;
+    position: relative;
+}
+
+.progress-indicator {
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 100%;
+    background-color: lightgray;
+    position: relative;
+    border-radius: 9999px; /* A large value for a full circle effect */
+    overflow: hidden; /* Ensure the rounded corners are visible */
+}
+
+.progress-indicator {
+    height: 100%;
+    transition: width 0.3s ease;
+    border-radius: 9999px; /* Match the parent's border-radius */
+}
+
+.progressGreen {
+    background-color: green;
+}
+
+.progressYellow {
+    background-color: yellow;
+}
+
+.progressRed {
+    background-color: red;
+}
+/*  */
+
+
+
+
+
+/* NumberFloat.svelte */
+.number {
+  position: absolute;
+  font-size: 16px;
+  color: white;
+  pointer-events: none;
+}
+
+
